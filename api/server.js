@@ -25,5 +25,5 @@ server
   .use(router.routes())
   .use(router.allowedMethods());
 
-server.listen(7070);
-console.log('server started on port 7070');
+server.listen(process.env.PORT)
+console.log(`server listening on port ${process.env.PORT}`);
