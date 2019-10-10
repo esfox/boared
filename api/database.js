@@ -11,9 +11,10 @@ class Post extends Model {}
 Post.init(
 {
   content: DataTypes.TEXT,
-}, { sequelize, underscored: true });
+}, { sequelize, underscore: true });
 
 sequelize.sync();
 
-exports.getPosts = () => Post.findAll();
+exports.getPosts = () =
+  > Post.findAll();
 exports.savePost = content => Post.create({ content });
