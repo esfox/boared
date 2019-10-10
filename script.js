@@ -8,7 +8,7 @@ const postTemplate = (post, timestamp) =>
 `
 <div class="post-create card">
 <div class="card-body">
-  ${post}
+  ${post.replace(/</g, "&lt;").replace(/>/g, "&gt;")}
   <span class="float-right timestamp">
     ${timestamp}
   </span>
