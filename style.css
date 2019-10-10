@@ -1,0 +1,54 @@
+body
+{
+  background-color: #353535;
+  padding: 2rem;
+  color: #ddd;
+}
+
+.header
+{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card
+{
+  background-color: #303030;
+  margin: 1rem;
+}
+
+.post-input, .post-input:focus
+{
+  background-color: #282828;
+  border: none;
+  color: #ddd;
+  resize: none;
+}
+
+.btn
+{
+  margin: 0 .2rem;
+}
+
+.btn-flat
+{
+  color: #ddd;
+}
+
+.timestamp
+{
+  color: #888;
+  font-size: 14px;
+  margin-top: .75rem;
+}
+
+.modal-content
+{
+  background-color: #353535;
+}
+
+.modal-footer, .modal-header
+{
+  border-top: none;
+  border-bottom: none;
+}
