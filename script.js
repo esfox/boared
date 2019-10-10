@@ -8,7 +8,7 @@ const postTemplate = (post, timestamp) =>
 `
 <div class="post-create card">
 <div class="card-body">
-  ${post}
+  <pre>${post}</pre>
   <span class="float-right timestamp">
     ${timestamp}
   </span>
@@ -19,7 +19,7 @@ const posts = $('.posts');
 const postInput = $('.post-input');
 const emptyError = $('#empty-input');
 
-const apiURL = 'http://localhost:7070/api';
+const apiURL = 'https://esfox-boared.glitch.me/api';
 
 (async () =>
 {
