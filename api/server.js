@@ -2,8 +2,6 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyparser = require('koa-bodyparser');
 const cors = require('@koa/cors');
-const serve = require('koa-static');
-const send = require('koa-send');
 
 const database = require('./database');
 
@@ -11,17 +9,13 @@ const server = new Koa();
 server.use(bodyparser());
 server.use(cors());
 
-server.use(serve('./frontend'));
-
-const router = new Router();
-router.get('/', context => send(context, './frontend'));
-
-router.get('/api', async context =>
+const router = new Router({ prefix: '/api' });
+router.get('/', async context =>
 {
   context.body = await database.getPosts();
 });
 
-router.post('/api', async context =>
+router.post('/', async context =>
 {
   const savedPost = await database.savePost(context.request.body.post);
   context.body = savedPost;
