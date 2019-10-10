@@ -8,7 +8,7 @@ const postTemplate = (post, timestamp) =>
 `
 <div class="post-create card">
 <div class="card-body">
-  <pre>${post}<pre>
+  <pre>${post}</pre>
   <span class="float-right timestamp">
     ${timestamp}
   </span>
